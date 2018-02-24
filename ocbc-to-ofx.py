@@ -92,7 +92,7 @@ def convertFile(f, originalFilePath):
     originalFileName = os.path.basename(originalFilePath).split(".")[0] # TODO: Will there be a scenario where there are multiple periods?
     newOFXFileName = originalParentDirectory + "/" + originalFileName + ".ofx"
     
-    print "Parsing CSV into " + newOFXFileName
+    print("Parsing CSV into " + newOFXFileName)
 
     # Open/create the .ofx file
     try:
@@ -218,9 +218,9 @@ def convertFile(f, originalFilePath):
                     </STMTTRN>
                     ''')
     
-    print "========= ERROR CHECKING ========="
-    print "Num Transactions (" + str(numTransactions) + ") and Num Entries (" +str(numEntries) + ") should match!"
-    print "=================================="
+    print("========= ERROR CHECKING =========")
+    print("Num Transactions (" + str(numTransactions) + ") and Num Entries (" +str(numEntries) + ") should match!")
+    print("==================================")
 
     outFile.write(
         '''</BANKTRANLIST>
